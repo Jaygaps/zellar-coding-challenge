@@ -61,7 +61,15 @@ function App() {
           </div>
           {products.map(product => {
             return (
-              <div key={product.id} className="products__body">
+              <div
+                key={product.id}
+                className={`products__body ${
+                  product.status === "expired" ? "products__bodyexpired" : ""
+                }`}
+              >
+                <span className="products__body--expired">
+                  {product.status === "expired" && "Expired"}
+                </span>
                 <div className="product__bodywrapper">
                   <div className="product__bodywrapper--text">
                     {product.supplier}

@@ -70,6 +70,14 @@
       background: white;
       margin: 16px 0px;
       border-radius: 10px;
+      position: relative;
+
+      &--expired {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        color: red;
+      }
 
       .product__bodywrapper {
         display: flex;
@@ -113,6 +121,11 @@
           margin: 6px 16px;
         }
       }
+    }
+
+    &__bodyexpired {
+      box-shadow: none;
+      border: 2px solid red;
     }
   }
 }
