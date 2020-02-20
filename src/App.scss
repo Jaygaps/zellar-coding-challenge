@@ -1,0 +1,118 @@
+@import "./styles/media";
+.App {
+  background: rgb(245, 246, 247);
+  height: 100vh;
+  .searchwrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &__container {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      max-width: 568px;
+      margin: 0 auto;
+
+      &--text {
+        font-size: 14px;
+
+        @include phablet {
+          font-size: 18px;
+        }
+      }
+
+      &--input {
+        border-radius: 15px;
+        border: none;
+        box-shadow: 0 10px 21px #e7eeef;
+        background: white;
+        padding: 18px;
+        margin-bottom: 16px;
+      }
+
+      &--button {
+        padding: 12px 30px;
+        border-radius: 12px;
+        background-color: #f4d03f;
+        background-image: linear-gradient(132deg, #f4d03f 0%, #16a085 100%);
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .products {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &__header {
+      display: flex;
+      background-color: #f4d03f;
+      background-image: linear-gradient(132deg, #f4d03f 0%, #16a085 100%);
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+
+      &--title {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+        font-weight: bold;
+        color: white;
+      }
+    }
+
+    &__body {
+      border-bottom: 1px solid #eee;
+      padding: 20px 0;
+      box-shadow: 0 10px 21px #e7eeef;
+      background: white;
+      margin: 16px 0px;
+      border-radius: 10px;
+
+      .product__bodywrapper {
+        display: flex;
+        align-items: center;
+
+        &--text {
+          padding: 10px 0;
+          flex: 1;
+          justify-content: center;
+          display: flex;
+
+          &:first-child {
+            font-weight: 700;
+          }
+
+          &:last-child {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+        }
+
+        .product__bodywrapper--button {
+          background-color: #16a085;
+          border: none;
+          padding: 7px 20px;
+          color: white;
+          font-weight: 700;
+          border-radius: 20px;
+          margin: 10px 0 0 5px;
+          cursor: pointer;
+        }
+      }
+
+      .product__moreinfo {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        &--text {
+          margin: 6px 16px;
+        }
+      }
+    }
+  }
+}
