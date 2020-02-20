@@ -11,7 +11,9 @@ function App() {
   const [selectedProduct, setSelectedProduct] = useState({});
 
   useEffect(() => {
-    fetchProducts(Products).then(response => setProducts(response.products));
+    fetchProducts(Products)
+      .then(response => setProducts(response.products))
+      .catch(err => new Error(err));
   }, []);
 
   function handleGasValue(e) {
